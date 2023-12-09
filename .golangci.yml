@@ -1,17 +1,35 @@
-run:
-  tests: false
-  timeout: 5m
 linters:
-  disable:
-    - maligned
-    - prealloc
-    - rowserrcheck
-  disable-all: false
-  presets:
-    - bugs
-  fast: false
-issues:
-  exclude-rules:
-    - linters:
-        - gosec
-      text: "G106:"
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - structcheck
+    - varcheck
+    - ineffassign
+    - typecheck
+    - revive
+    - gofmt
+    - asasalint
+    - asciicheck
+    - bidichk
+    - errname
+    - errorlint
+    - exhaustive
+    - exportloopref
+    - forcetypeassert
+    - gocheckcompilerdirectives
+    - gocritic
+    - goheader
+    - goimports
+    - gosec
+    - misspell
+    - nakedret
+    - nilerr
+    - nosprintfhostport
+    - sqlclosecheck
+    - testpackage
+    - unconvert
+    - unparam
+    - whitespace
