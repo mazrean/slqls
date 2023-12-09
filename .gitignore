@@ -29,7 +29,7 @@ docker
 .docker
 
 # build dist
-sqls
+slqls
 dist/
 
 # direnv

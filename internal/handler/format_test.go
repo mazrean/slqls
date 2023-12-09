@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/lighttiger2505/sqls/internal/config"
-	"github.com/lighttiger2505/sqls/internal/lsp"
+	"github.com/mazrean/slqls/internal/config"
+	"github.com/mazrean/slqls/internal/lsp"
 )
 
 var formattingOptionTab = lsp.FormattingOptions{
@@ -58,9 +58,9 @@ func testFormatting(t *testing.T, testCases []formattingTestCase, options lsp.Fo
 
 	didChangeConfigurationParams := lsp.DidChangeConfigurationParams{
 		Settings: struct {
-			SQLS *config.Config "json:\"sqls\""
+			SLQLS *config.Config "json:\"slqls\""
 		}{
-			SQLS: cfg,
+			SLQLS: cfg,
 		},
 	}
 

@@ -5,7 +5,7 @@ before:
     # You may remove this if you don't use go modules.
     - go mod download
 builds:
-  - id: sqls-darwin-amd64
+  - id: slqls-darwin-amd64
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
@@ -18,7 +18,7 @@ builds:
       - darwin
     goarch:
       - amd64
-  - id: sqls-linux-amd64
+  - id: slqls-linux-amd64
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
@@ -29,7 +29,7 @@ builds:
       - linux
     goarch:
       - amd64
-  - id: sqls-windows-amd64
+  - id: slqls-windows-amd64
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
@@ -61,7 +61,7 @@ changelog:
 release:
   github:
     owner: lighttiger2505
-    name: sqls
+    name: slqls
   # If set to auto, will mark the release as not ready for production
   # in case there is an indicator for this in the tag e.g. v1.0.0-rc1
   # If set to true, will mark the release as not ready for production.

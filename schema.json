@@ -16,12 +16,7 @@
           "driver": {
             "description": "mysql, postgresql, sqlite3, mssql. Required",
             "type": "string",
-            "enum": [
-              "mysql",
-              "postgresql",
-              "sqlite3",
-              "mssql"
-            ]
+            "enum": ["mysql", "postgresql", "sqlite3", "mssql"]
           },
           "dataSourceName": {
             "description": "Data source name",
@@ -30,11 +25,7 @@
           "proto": {
             "description": "tcp, udp, unix",
             "type": "string",
-            "enum": [
-              "tcp",
-              "udp",
-              "unix"
-            ]
+            "enum": ["tcp", "udp", "unix"]
           },
           "user": {
             "description": "User name",
@@ -104,6 +95,6 @@
       "$ref": "#/definitions/connection-definition"
     }
   },
-  "title": "sqls",
+  "title": "slqls",
   "type": "object"
 }

@@ -1,50 +1,50 @@
-version: '3'
+version: "3"
 services:
   mysql8:
     image: mysql:8
-    container_name: sqls_mysql8
+    container_name: slqls_mysql8
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: world
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      TZ: 'Asia/Tokyo'
+      TZ: "Asia/Tokyo"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-    - ./.docker/mysql/data:/var/lib/mysql8
+      - ./.docker/mysql/data:/var/lib/mysql8
     ports:
-    - 13307:3306
+      - 13307:3306
   mysql57:
     image: mysql:5.7
-    container_name: sqls_mysql57
+    container_name: slqls_mysql57
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: world
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      TZ: 'Asia/Tokyo'
+      TZ: "Asia/Tokyo"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-    - ./.docker/mysql/data:/var/lib/mysql57
+      - ./.docker/mysql/data:/var/lib/mysql57
     ports:
-    - 13306:3306
+      - 13306:3306
   mysql56:
     image: mysql:5.6
-    container_name: sqls_mysql56
+    container_name: slqls_mysql56
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: world
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      TZ: 'Asia/Tokyo'
+      TZ: "Asia/Tokyo"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-    - ./.docker/mysql/data:/var/lib/mysql56
+      - ./.docker/mysql/data:/var/lib/mysql56
     ports:
-    - 13305:3306
+      - 13305:3306
   postgres12:
     image: postgres:12-alpine
-    container_name: sqls_postgres12
+    container_name: slqls_postgres12
     ports:
       - "15432:5432"
     environment:
@@ -57,7 +57,7 @@ services:
       - ./.docker/postgres/data:/var/lib/postgresql/data
   mssql2019:
     image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: sqls_mssql2019
+    container_name: slqls_mssql2019
     ports:
       - "11433:1433"
     environment:

@@ -1,5 +1,5 @@
 connections:
-  - alias: sqls_mysql
+  - alias: slqls_mysql
     driver: mysql
     dataSourceName: ""
     proto: invalid

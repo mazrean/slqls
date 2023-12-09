@@ -14,8 +14,8 @@ import (
 	"github.com/sourcegraph/jsonrpc2"
 	"github.com/urfave/cli/v2"
 
-	"github.com/lighttiger2505/sqls/internal/config"
-	"github.com/lighttiger2505/sqls/internal/handler"
+	"github.com/mazrean/slqls/internal/config"
+	"github.com/mazrean/slqls/internal/handler"
 )
 
 // builtin variables. see Makefile
@@ -34,7 +34,7 @@ func main() {
 
 func realMain() error {
 	app := &cli.App{
-		Name:    "sqls",
+		Name:    "slqls",
 		Version: fmt.Sprintf("Version:%s, Revision:%s\n", version, revision),
 		Usage:   "An implementation of the Language Server Protocol for SQL.",
 		Flags: []cli.Flag{
@@ -142,14 +142,14 @@ func serve(c *cli.Context) error {
 	}
 
 	// Start language server
-	log.Println("sqls: reading on stdin, writing on stdout")
+	log.Println("slqls: reading on stdin, writing on stdout")
 	<-jsonrpc2.NewConn(
 		context.Background(),
 		jsonrpc2.NewBufferedStream(stdrwc{}, jsonrpc2.VSCodeObjectCodec{}),
 		h,
 		connOpt...,
 	).DisconnectNotify()
-	log.Println("sqls: connections closed")
+	log.Println("slqls: connections closed")
 
 	return nil
 }

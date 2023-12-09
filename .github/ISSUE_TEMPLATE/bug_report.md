@@ -22,7 +22,7 @@ A clear and concise description of what you expected to happen.
 
 **Versions (please complete the following information):**
  - OS Version: [e.g. iOS]
- - sqls Version [e.g. 22]
+ - slqls Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.

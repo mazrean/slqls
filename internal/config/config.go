@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/lighttiger2505/sqls/internal/database"
+	"github.com/mazrean/slqls/internal/database"
 	"gopkg.in/yaml.v2"
 )
 
@@ -90,7 +90,7 @@ func IsFileExist(fPath string) bool {
 
 func configFilePath(fileName string) string {
 	if xdgConfigHome := os.Getenv("XDG_CONFIG_HOME"); xdgConfigHome != "" {
-		return filepath.Join(xdgConfigHome, "sqls", fileName)
+		return filepath.Join(xdgConfigHome, "slqls", fileName)
 	}
 
 	homeDir, err := os.UserHomeDir()
@@ -98,7 +98,7 @@ func configFilePath(fileName string) string {
 		panic(err)
 	}
 
-	return filepath.Join(homeDir, ".config", "sqls", fileName)
+	return filepath.Join(homeDir, ".config", "slqls", fileName)
 }
 
 func expand(path string) (string, error) {

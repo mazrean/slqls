@@ -10,9 +10,9 @@ import (
 
 	"github.com/sourcegraph/jsonrpc2"
 
-	"github.com/lighttiger2505/sqls/internal/config"
-	"github.com/lighttiger2505/sqls/internal/database"
-	"github.com/lighttiger2505/sqls/internal/lsp"
+	"github.com/mazrean/slqls/internal/config"
+	"github.com/mazrean/slqls/internal/database"
+	"github.com/mazrean/slqls/internal/lsp"
 )
 
 var (
@@ -306,7 +306,7 @@ func (s *Server) handleWorkspaceDidChangeConfiguration(ctx context.Context, conn
 	if err := json.Unmarshal(*req.Params, &params); err != nil {
 		return nil, err
 	}
-	s.WSCfg = params.Settings.SQLS
+	s.WSCfg = params.Settings.SLQLS
 
 	// Skip database connection
 	if s.dbConn != nil {

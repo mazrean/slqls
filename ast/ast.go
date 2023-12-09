@@ -3,8 +3,8 @@ package ast
 import (
 	"strings"
 
-	"github.com/lighttiger2505/sqls/dialect"
-	"github.com/lighttiger2505/sqls/token"
+	"github.com/mazrean/slqls/dialect"
+	"github.com/mazrean/slqls/token"
 )
 
 type NodeType int

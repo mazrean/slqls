@@ -1,6 +1,6 @@
 lowercaseKeywords: true
 connections:
-  - alias: sqls_mysql
+  - alias: slqls_mysql
     driver: mysql
     dataSourceName: ""
     proto: tcp
@@ -13,10 +13,10 @@ connections:
     params:
       autocommit: "true"
       tls: skip-verify
-  - alias: sqls_sqlite3
+  - alias: slqls_sqlite3
     driver: sqlite3
     dataSourceName: "file:/home/lighttiger2505/chinook.db"
-  - alias: sqls_postgresql
+  - alias: slqls_postgresql
     driver: postgresql
     dataSourceName: ""
     proto: tcp

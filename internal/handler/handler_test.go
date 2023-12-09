@@ -9,8 +9,8 @@ import (
 
 	"github.com/sourcegraph/jsonrpc2"
 
-	"github.com/lighttiger2505/sqls/internal/config"
-	"github.com/lighttiger2505/sqls/internal/lsp"
+	"github.com/mazrean/slqls/internal/config"
+	"github.com/mazrean/slqls/internal/lsp"
 )
 
 const testFileURI = "file:///Users/octref/Code/css-test/test.sql"
@@ -73,9 +73,9 @@ func (tx *TestContext) initServer(t *testing.T) {
 func (tx *TestContext) addWorkspaceConfig(t *testing.T, cfg *config.Config) {
 	didChangeConfigurationParams := lsp.DidChangeConfigurationParams{
 		Settings: struct {
-			SQLS *config.Config "json:\"sqls\""
+			SLQLS *config.Config "json:\"slqls\""
 		}{
-			SQLS: cfg,
+			SLQLS: cfg,
 		},
 	}
 	if err := tx.conn.Call(tx.ctx, "workspace/didChangeConfiguration", didChangeConfigurationParams, nil); err != nil {

@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/lighttiger2505/sqls/internal/database"
+	"github.com/mazrean/slqls/internal/database"
 )
 
 func TestGetConfig(t *testing.T) {
@@ -29,7 +29,7 @@ func TestGetConfig(t *testing.T) {
 				LowercaseKeywords: true,
 				Connections: []*database.DBConfig{
 					{
-						Alias:  "sqls_mysql",
+						Alias:  "slqls_mysql",
 						Driver: "mysql",
 						Proto:  "tcp",
 						User:   "root",
@@ -40,12 +40,12 @@ func TestGetConfig(t *testing.T) {
 						Params: map[string]string{"autocommit": "true", "tls": "skip-verify"},
 					},
 					{
-						Alias:          "sqls_sqlite3",
+						Alias:          "slqls_sqlite3",
 						Driver:         "sqlite3",
 						DataSourceName: "file:/home/lighttiger2505/chinook.db",
 					},
 					{
-						Alias:  "sqls_postgresql",
+						Alias:  "slqls_postgresql",
 						Driver: "postgresql",
 						Proto:  "tcp",
 						User:   "postgres",

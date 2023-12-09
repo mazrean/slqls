@@ -1,9 +1,9 @@
 package parseutil
 
 import (
-	"github.com/lighttiger2505/sqls/ast"
-	"github.com/lighttiger2505/sqls/ast/astutil"
-	"github.com/lighttiger2505/sqls/token"
+	"github.com/mazrean/slqls/ast"
+	"github.com/mazrean/slqls/ast/astutil"
+	"github.com/mazrean/slqls/token"
 )
 
 type (
