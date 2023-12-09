@@ -2,7 +2,7 @@ package token
 
 type Kind int
 
-//go:generate stringer -type Kind kind.go
+//go:generate go run golang.org/x/tools/cmd/stringer -type Kind kind.go
 const (
 	// A keyword (like SELECT)
 	SQLKeyword Kind = iota

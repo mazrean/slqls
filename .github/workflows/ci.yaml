@@ -56,3 +56,13 @@ jobs:
           reporter: github-pr-check
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+      - run: go generate ./...
+      - run: git diff --exit-code
