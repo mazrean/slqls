@@ -2,7 +2,7 @@ package dialect
 
 type KeywordKind int
 
-//go:generate stringer -type KeywordKind kind.go
+//go:generate go run golang.org/x/tools/cmd/stringer -type KeywordKind keyword.go
 const (
 	// Matched keyword
 	Matched KeywordKind = iota
