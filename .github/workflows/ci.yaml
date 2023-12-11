@@ -27,6 +27,19 @@ jobs:
         with:
           name: assets
           path: ./dist/*
+  test-race:
+    name: Test(Race Detector)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+      - run: go test ./... -v -coverprofile=./coverage.txt -race -vet=off
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage.txt
+          path: coverage.txt
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -35,7 +48,7 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version-file: go.mod
-      - run: go test ./... -v -coverprofile=./coverage.txt -race -vet=off
+      - run: go test ./... -v -coverprofile=./coverage.txt -vet=off
       - name: Upload coverage data
         uses: codecov/codecov-action@v3.1.4
         with:

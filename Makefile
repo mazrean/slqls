@@ -6,7 +6,11 @@ LDFLAGS := -ldflags="-s -w -X \"main.version=$(VERSION)\" -X \"main.revision=$(R
 
 .PHONY: test
 test:
-	go test ./... -race -vet=off
+	go test ./... -v -vet=off
+
+.PHONY: test-race
+test-race:
+	go test ./... -v -race -vet=off
 
 .PHONY: install
 install:
@@ -22,7 +26,7 @@ lint:
 
 .PHONY: coverage
 coverage:
-	go test ./... -v -coverprofile=coverage.out -race -vet=off
+	go test ./... -v -coverprofile=coverage.out -vet=off
 	go tool cover -html=coverage.out
 
 .PHONY: snapshot
