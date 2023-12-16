@@ -23,7 +23,7 @@ jobs:
         with:
           args: release --snapshot --rm-dist
       - name: Upload assets
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: assets
           path: ./dist/*
@@ -36,7 +36,7 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go test ./... -v -coverprofile=./coverage.txt -race -vet=off
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: coverage.txt
           path: coverage.txt
@@ -53,7 +53,7 @@ jobs:
         uses: codecov/codecov-action@v3.1.4
         with:
           file: ./coverage.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: coverage.txt
           path: coverage.txt
