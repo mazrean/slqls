@@ -11,7 +11,7 @@ require (
 	github.com/goreleaser/goreleaser v1.22.1
 	github.com/jackc/pgx/v4 v4.12.0
 	github.com/k0kubun/pp v2.4.0+incompatible
-	github.com/mattn/go-sqlite3 v1.14.8
+	github.com/mattn/go-sqlite3 v1.14.19
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/sourcegraph/jsonrpc2 v0.1.0
 	github.com/urfave/cli/v2 v2.3.0
