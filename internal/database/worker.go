@@ -12,7 +12,7 @@ type Worker struct {
 
 	done   chan struct{}
 	update chan struct{}
-	lock   sync.Mutex
+	lock   sync.RWMutex
 }
 
 func NewWorker() *Worker {
@@ -23,6 +23,8 @@ func NewWorker() *Worker {
 }
 
 func (w *Worker) Cache() *DBCache {
+	w.lock.RLock()
+	defer w.lock.RUnlock()
 	return w.dbCache
 }
 
