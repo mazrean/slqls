@@ -15,7 +15,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/sourcegraph/jsonrpc2 v0.1.0
 	github.com/urfave/cli/v2 v2.3.0
-	golang.org/x/crypto v0.16.0
+	golang.org/x/crypto v0.17.0
 	golang.org/x/tools v0.14.0
 	gopkg.in/yaml.v2 v2.4.0
 )
