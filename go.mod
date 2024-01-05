@@ -10,7 +10,7 @@ require (
 	github.com/google/go-cmp v0.6.0
 	github.com/goreleaser/goreleaser v1.22.1
 	github.com/jackc/pgx/v4 v4.12.0
-	github.com/k0kubun/pp v2.4.0+incompatible
+	github.com/k0kubun/pp v3.0.1+incompatible
 	github.com/mattn/go-sqlite3 v1.14.19
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/sourcegraph/jsonrpc2 v0.1.0
