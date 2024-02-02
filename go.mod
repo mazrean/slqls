@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/denisenkom/go-mssqldb v0.11.0
 	github.com/go-sql-driver/mysql v1.7.1
-	github.com/godror/godror v0.40.4
+	github.com/godror/godror v0.41.1
 	github.com/golangci/golangci-lint v1.55.2
 	github.com/google/go-cmp v0.6.0
 	github.com/goreleaser/goreleaser v1.22.1
